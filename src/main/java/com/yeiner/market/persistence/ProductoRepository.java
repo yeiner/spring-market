@@ -5,6 +5,7 @@ import com.yeiner.market.domain.repository.ProductRepository;
 import com.yeiner.market.persistence.crud.ProductoCrudRepository;
 import com.yeiner.market.persistence.entity.Producto;
 import com.yeiner.market.persistence.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.sound.midi.MidiChannel;
@@ -13,7 +14,10 @@ import java.util.Optional;
 
 @Repository
 public class ProductoRepository implements ProductRepository {
+    @Autowired
     private ProductoCrudRepository productoCrudRepository;
+
+    @Autowired
     private ProductMapper mapper;
 
     @Override
